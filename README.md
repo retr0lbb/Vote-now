@@ -6,7 +6,7 @@
 - style 💅: shadcn/ui, NextUi, Tailwind css
 
 [![My Skills](https://skillicons.dev/icons?i=ts,react,vite,js,md,tailwind)](https://skillicons.dev)
-
+  
 
 
 ## o que é: 💭
