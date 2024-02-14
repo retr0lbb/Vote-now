@@ -12,14 +12,15 @@ export const NewHeader: React.FC = () => {
 
     const { darkMode, toggleDarkMode } = darkModeContext;
 
-    
     return (
         <header className="flex w-full h-20 items-center justify-between px-10 bg-zinc-100 dark:bg-zinc-900">
-            <h1 onClick={() => {window.location.href = "/1"}} className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent cursor-pointer h-full flex justify-center items-center text-3xl font-bold text-center dark:text-zinc-200">
+            <h1 onClick={() => {window.location.href = "/1"}} 
+            className="xs:hidden bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent cursor-pointer h-full sm:flex justify-center items-center text-3xl font-bold text-center dark:text-zinc-200">
                 Vote Now
             </h1>
-            <div className="flex justify-center items-center gap-5">
+            <div className="flex xs:w-full sm:w-auto sm:justify-center xs:justify-around items-center gap-5">
                 <Button
+                    className="xs:p-5 sx:rounded-full sm:rounded-md"
                     onClick={() => {
                         window.location.href = "/post"
                     }}

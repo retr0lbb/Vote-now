@@ -4,8 +4,8 @@ export const IntroPage: React.FC = () => {
     return(
         <div className="w-full flex flex-col items-center justify-center h-full gap-14">
             <div className="flex items-center justify-center flex-col">
-                <h1 className="text-9xl font-bold">Vote Now!</h1>
-                <h1 className="text-3xl text-zinc-400">
+                <h1 className="md:text-9xl xs:text-6xl font-bold">Vote Now!</h1>
+                <h1 className="md:text-3xl sm:text-xl text-center px-4 text-zinc-400">
                     Vote em enquetes da comunidade e participe de algo incrivel
                 </h1>
             </div>

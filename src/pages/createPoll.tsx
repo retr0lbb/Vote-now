@@ -64,7 +64,7 @@ export const CreatePoll: React.FC = () => {
             title: pollName,
             options: options
         }
-        axios.post("http://localhost:3333/polls", postOptions).then((response) => {
+        axios.post("https://fluffy-waistcoat-ant.cyclic.app/polls", postOptions).then((response) => {
             console.log(response)
             if(response.status === 201){
                 alert("Enquete criada indo para a pagina principal")

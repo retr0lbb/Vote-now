@@ -22,7 +22,8 @@ export const PollWrapper: React.FC<PollWrappProps> = ({children, className, curr
     }
     return(
         <section className={twMerge("flex flex-col items-center", className)}>
-           <div className={`p-5 grid gap-2 grid-cols-4`}>
+           <div className={`p-5 grid gap-2 sm:grid-cols-2 xl:grid-cols-4 
+           xs:overflow-y-auto sm:h-auto xs:h-[650px] sx:grid-cols-1`}>
             {renderItems()}
            </div>
         </section>
