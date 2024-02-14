@@ -7,7 +7,6 @@ import { useParams} from "react-router-dom"
 import axios from "axios";
 import { ApiError } from "@/pages/fallback/ApiError";
 
-
 interface Options{
     id: string;
     title: string
@@ -41,7 +40,13 @@ export default function PollDetails(){
         const body = {
             pollOptionId: pollOptionId
         }
-        instance.post(`http://localhost:3333/polls/${id}/votes`, body)
+        instance.post(`https://fluffy-waistcoat-ant.cyclic.app/polls/${id}/votes`, body, {
+        withCredentials: true,    
+        headers:{
+                 "Content-Type": "application/json",
+                 "Access-Control-Allow-Origin": 'https://fluffy-waistcoat-ant.cyclic.app',
+            }
+        })
         .then(_ =>{
             toast.success("Voto alterado com sucesso")
         })

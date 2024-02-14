@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 
 const api = axios.create({
-    baseURL: "http://localhost:3333"
+    baseURL: "https://fluffy-waistcoat-ant.cyclic.app"
 })
 
 export function useData<T = unknown>(url: string){
@@ -11,7 +11,9 @@ export function useData<T = unknown>(url: string){
     const [hasError, setHasError] = useState(false)
 
     useEffect(()=>{
-        api.get(url)
+        api.get(url, {
+            withCredentials: true
+        })
         .then(response => {
             if(response.data === data){
                 console.log("no data alteration provided")
